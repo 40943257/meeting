@@ -1,0 +1,162 @@
+﻿doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title 使用者主頁
+    link(rel='stylesheet' type='text/css' href='/stylesheets/bootstrap/bootstrap.min.css')
+  body
+    script(src='/javascripts/bootstrap/bootstrap.min.js')
+    .container
+      .row
+        .col-2
+          nav.navbar.justify-content-center.navbar-light.bg-light
+            ul.navbar-nav
+              li.nav-item
+                a.nav-link(href='user') 回使用者主頁
+              li.nav-item
+                a.nav-link(href='booking') 預定會議
+              li.nav-item
+                a.nav-link(href='join') 加入會議
+        .col-8
+          h1 歷史會議列表
+          table.table.table-success.table-striped
+            thead
+              tr
+                th(scope='col') 會議名稱
+                th(scope='col') 日期
+                th(scope='col') 主辦單位
+                th(scope='col') 主辦人
+                th(scope='col') 播放記錄檔
+            tbody
+              tr.table-primary(data-bs-toggle='collapse' data-bs-target='#r1')
+                td 中文(一)
+                td 2022/12/12
+                td 通識教育中心
+                td 莊怡文
+                td(align='center')
+                  button.btn.btn-outline-dark.btn-sm(type='button') 播放
+              tr#r1.collapse.accordion-collapse(data-bs-parent='.table')
+                td(colspan='5')
+                  | Item 1 detail .. This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+              tr.table-secondary
+                td 英文(一)
+                td 2022/12/13
+                td 語言教學中心
+                td 張敏慧
+                td(align='center')
+                  button.btn.btn-outline-dark.btn-sm(type='button') 播放
+              tr.table-success
+                td 通識1
+                td 2022/12/14
+                td 通識教育中心
+                td 方俊源
+                td(align='center')
+                  button.btn.btn-outline-dark.btn-sm(type='button') 播放
+              tr.table-danger
+                td 安全程式設計
+                td 2022/12/15
+                td 多媒體網路實驗室
+                td 林易泉
+                td(align='center')
+                  button.btn.btn-outline-dark.btn-sm(type='button') 播放
+              tr.table-warning
+                td 3D列印切片應用
+                td 2022/12/16
+                td 中部創新自造教育基地
+                td DreamMaker
+                td(align='center')
+                  button.btn.btn-outline-dark.btn-sm(type='button') 播放
+          h1 已排定會議列表
+          table.table.table-success.table-striped.accordion
+            thead
+              tr
+                th(scope='col') 會議名稱
+                th(scope='col') 日期
+                th(scope='col') 主辦單位
+                th(scope='col') 主辦人
+                th(scope='col') 參加會議
+            tbody
+              tr.table-primary
+                td 中文(一)
+                td 2022/12/26
+                td 通識教育中心
+                td 莊怡文
+                td(align='center')
+                  button.btn.btn-outline-dark.btn-sm(type='button' disabled='') 參加
+              tr.table-secondary
+                td 英文(一)
+                td 2022/12/27
+                td 語言教學中心
+                td 張敏慧
+                td(align='center')
+                  button.btn.btn-outline-dark.btn-sm(type='button' disabled='') 參加
+              tr.table-success
+                td 通識1
+                td 2022/12/28
+                td 通識教育中心
+                td 方俊源
+                td(align='center')
+                  button.btn.btn-outline-dark.btn-sm(type='button' disabled='') 參加
+              tr.table-danger
+                td 安全程式設計
+                td 2022/12/29
+                td 多媒體網路實驗室
+                td 林易泉
+                td(align='center')
+                  button.btn.btn-outline-dark.btn-sm(type='button' disabled='') 參加
+              tr.table-warning
+                td 3D列印切片應用
+                td 2022/12/30
+                td 中部創新自造教育基地
+                td DreamMaker
+                td(align='center')
+                  button.btn.btn-outline-dark.btn-sm(type='button' disabled='') 參加
+          //
+            <table>
+            <tr>
+            <td>會議名稱</td>
+            <td>日期</td>
+            <td>主辦單位</td>
+            <td>主辦人</td>
+            </tr>
+            <tr>
+            <td>中文(一)</td>
+            <td>2022/12/1</td>
+            <td>通識教育中心</td>
+            <td>莊怡文</td>
+            </tr>
+            <tr>
+            <td>英文(一)</td>
+            <td>2022/12/2</td>
+            <td>語言教學中心</td>
+            <td>張敏慧</td>
+            </tr>
+            <tr>
+            <td>通識1</td>
+            <td>2022/12/3</td>
+            <td>通識教育中心</td>
+            <td>方俊源</td>
+            </tr>
+            <tr>
+            <td>安全程式設計</td>
+            <td>2022/12/4</td>
+            <td>多媒體網路實驗室</td>
+            <td>林易泉</td>
+            </tr>
+            <tr>
+            <td>3D列印切片應用</td>
+            <td>2022/12/4</td>
+            <td>中部創新自造教育基地</td>
+            <td>DreamMaker</td>
+            </tr>
+            </table>
+        //
+          <div class="col-2">
+          <nav>
+          <h1>會議</h1>
+          <a href="./booking.html">預定會議</a><br>
+          <a href="./join.html">加入會議</a>
+          </nav>
+          </div>

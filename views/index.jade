@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title 具智慧化行為分析的會議系統首頁
+    link(rel='stylesheet' type='text/css' href='/stylesheets/bootstrap/bootstrap.min.css')
+  body
+    script(src='/javascripts/bootstrap/bootstrap.min.js')
+    .container
+      .row
+        .col-4
+        .col-4
+          form
+            .mb-3
+              label.form-label(for='Account') 帳號
+              input#account.form-control(type='account' placeholder='帳號 / Account')
+            .mb-3
+              label.form-label(for='Password') 密碼
+              input#password.form-control(type='password' placeholder='密碼 / Password')
+            .mb-3.form-check
+              input#check.form-check-input(type='checkbox')
+              label.form-check-label(for='check') 記住帳密
+            button.btn.btn-primary(type='button' onclick="location.href='user'") 登入 / Login
+        //
+          <div class="col-4">
+          </div>

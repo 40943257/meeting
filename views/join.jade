@@ -1,0 +1,34 @@
+﻿doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title 加入會議
+    link(rel='stylesheet' type='text/css' href='/stylesheets/bootstrap/bootstrap.min.css')
+  body
+    script(src='/javascripts/bootstrap/bootstrap.min.js')
+    .container
+      .row
+        .col-2
+          nav.navbar.justify-content-center.navbar-light.bg-light
+            ul.navbar-nav
+              li.nav-item
+                a.nav-link(href='user') 回使用者主頁
+              li.nav-item
+                a.nav-link(href='booking') 預定會議
+              li.nav-item
+                a.nav-link(href='join') 加入會議
+        .col-8
+          h1 加入會議
+          input(type='text' name='加入會議' placeholder='請輸入會議代碼/連結')
+          button.btn.btn-sm.btn-primary.btn-block.btn-login.input-height.font16(type='button' name='加入會議' onclick="location.href='room'")
+            | 點我加入!
+        //
+          <div class="col-2">
+          <nav>
+          <h1>會議</h1>
+          <a href="./booking.html">預定會議</a><br>
+          <a href="./join.html">加入會議</a>
+          </nav>
+          </div>
